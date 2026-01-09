@@ -1,0 +1,309 @@
+body{ 
+    margin:0;
+    background-color:rgb(7, 1, 27);
+    height:100vh; 
+    position:relative; 
+}
+.bahce{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.cicekler{
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform-origin: bottom center;
+}
+.cicekler:nth-child(1){
+    transform: translateX(-0px) rotate(-45deg);
+    z-index:1;
+}
+
+.cicekler:nth-child(2){
+    transform: translateX(-0px) rotate(-22deg);
+    z-index:2;
+}
+
+.cicekler:nth-child(3){
+    transform: translateX(0px) rotate(0deg);
+    z-index:3;
+}
+
+.cicekler:nth-child(4){
+    transform: translateX(0px) rotate(22deg);
+    z-index:2;
+}
+
+.cicekler:nth-child(5){
+    transform: translateX(0px) rotate(45deg);
+    z-index:1;
+}
+
+.gövde{ 
+    width:4px;
+    height:0px;
+    animation-name:sapAnimasyon;
+    animation-duration:2s; 
+    animation-fill-mode:forwards; 
+    position:absolute; 
+    left:50%; 
+    bottom:10%;
+    background-color:rgb(9, 102, 9); 
+    border-radius:2px;
+    transform: translateX(-50%);
+}
+
+@keyframes sapAnimasyon{ 
+    from{ height:0; }
+    to{ height:250px; } 
+} 
+
+@keyframes sapAnimasyonUzun{ 
+    from{ height:0; }
+    to{ height:320px; } 
+} 
+
+@keyframes sapAnimasyon1{ 
+    from{ height:0; }
+    to{ height:210px; } 
+} 
+
+@keyframes sapAnimasyon2{ 
+    from{ height:0; }
+    to{ height:280px; } 
+} 
+
+@keyframes sapAnimasyon4{ 
+    from{ height:0; }
+    to{ height:260px; } 
+} 
+
+@keyframes sapAnimasyon5{ 
+    from{ height:0; }
+    to{ height:190px; } 
+} 
+
+.cicek-wrapper{
+    position:absolute;   
+    left:50%;
+    bottom:calc(10% + 250px);
+    transform: translateX(-50%);
+     animation: yaprakGoster 1s forwards;
+    animation-delay: 2.0s;
+    opacity: 0;
+}
+
+.cicek{ 
+    width:100px; 
+    height:100px; 
+    position:relative;
+    perspective:600px;
+} 
+
+.yaprak{
+    position:absolute; 
+    width:56px; 
+    height:130px; 
+    background: linear-gradient(to bottom, #dcdcdc 0%, #ffffff 20%, #ffffff 85%, #e8f5e9 100%);
+    box-shadow: inset 0 15px 15px -5px rgba(0,0,0,0.15);
+    border-radius: 45% 45% 50% 50% / 60% 60% 40% 40%;
+    transform-origin:bottom center; 
+    top:15px; 
+    left:50%; 
+    transform:translateX(-50%); 
+}
+
+.yaprak-1,.yaprak-3,.yaprak-5{
+    height:140px; 
+    z-index:1; 
+}
+
+.yaprak-2,.yaprak-4,.yaprak-6{
+    height:120px;
+    width:50px; 
+    opacity:0.8; 
+
+    z-index:1;
+} 
+
+.yaprak-1{ transform: translateX(-50%) rotate(0deg) rotateX(35deg); }
+.yaprak-2{ transform: translateX(-50%) rotate(50deg) rotateX(35deg); } 
+.yaprak-3{ transform: translateX(-50%) rotate(110deg) rotateX(35deg); } 
+.yaprak-4{ transform: translateX(-50%) rotate(190deg) rotateX(35deg); } 
+.yaprak-5{ transform: translateX(-50%) rotate(250deg) rotateX(35deg); } 
+.yaprak-6{ transform: translateX(-50%) rotate(310deg) rotateX(35deg); }
+
+.merkez{
+    width: 40px;  
+    height: 40px;
+    left:50%;
+    top:50%;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    z-index:10;
+}
+
+.yuvarlak{
+    position:absolute;
+    background-color:rgb(228, 115, 69);
+    border-radius:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 6px 2px rgba(221, 166, 98, 0.551);
+    z-index:12;
+}
+
+.sap{
+    position:absolute;
+    background:linear-gradient(to bottom, rgb(163, 242, 163), rgb(255, 255, 255));
+    transform: translate(-50%, -50%);
+    z-index:11;
+    border-radius:2px;
+}
+.sap-1{
+    width:3px;
+    height:40px;
+    left:50%;
+    top:100px;
+    transform: translate(-50%, -50%) rotate(deg);
+}
+.yuvarlak-1{
+    width:3px;
+    height:10px;
+    left:50%;
+    top:80px;
+    transform-origin: 50% 35px;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.sap-2{
+    width:3px;
+    height:40px;
+    left:30px;
+    top:100px;
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+.yuvarlak-2{
+    width:3px;
+    height:10px;
+    left:30px;
+    top:80px;
+    transform-origin: 40% 23px;
+    transform: translate(-50%, -50%) rotate(19deg);
+}
+.sap-3{
+   width:3px;
+    height:20px;
+    left:25px;
+    top:100px;
+    transform: translate(-50%, -50%) rotate(13deg); 
+}
+.yuvarlak-3{
+    width:3px;
+    height:10px;
+    left:25px;
+    top:90px;
+    transform-origin: 50% 15px;
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+.sap-4{
+    width:3px;
+    height:20px;
+    left:15px;
+    top:100px;
+    transform: translate(-50%, -50%) rotate(-13deg); 
+}
+.yuvarlak-4{
+    width:3px;
+    height:10px;
+    left:15px;
+    top:90px;
+    transform-origin: 50% 15px;
+    transform: translate(-50%, -50%) rotate(-15deg);
+}
+.sap-5{
+    width:3px;
+    height:40px;
+    left:8px;
+    top:100px;
+    transform: translate(-50%, -50%) rotate(-20deg);
+}
+.yuvarlak-5{
+    width:3px;
+    height:10px;
+    left:15px;
+    top:80px;
+    transform-origin: 50% 35px;
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+.govdeyaprak {
+    position: absolute;
+    width: 25px; 
+    height: 50px;
+    background: linear-gradient(to bottom, rgb(18, 72, 18), rgb(45, 120, 20)); 
+    z-index: 5;
+
+    animation: yaprakGoster 1s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+@keyframes yaprakGoster {
+    to { opacity: 1; }
+}
+
+.govdeyaprak-1 {
+    left: -13px; 
+    bottom: 60px;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+    border-radius: 0 100% 0 100% / 0 100% 0 100%; 
+}
+
+.govdeyaprak2 {
+    right: -13px; 
+    bottom: 60px;
+    transform-origin: bottom right;
+    transform: rotate(-45deg);
+    border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+}
+.cicekler:nth-child(3) .gövde{
+    animation-name: sapAnimasyonUzun;
+    animation-duration: 2.6s;
+}
+
+.cicekler:nth-child(3) .cicek-wrapper{
+    bottom: calc(10% + 320px);
+}
+
+.cicekler:nth-child(1) .gövde{
+    animation-name: sapAnimasyon1;
+    animation-duration: 2.2s;
+}
+.cicekler:nth-child(1) .cicek-wrapper{
+    bottom: calc(10% + 210px);
+}
+
+.cicekler:nth-child(2) .gövde{
+    animation-name: sapAnimasyon2;
+    animation-duration: 2.4s;
+}
+.cicekler:nth-child(2) .cicek-wrapper{
+    bottom: calc(10% + 280px);
+}
+
+.cicekler:nth-child(4) .gövde{
+    animation-name: sapAnimasyon4;
+    animation-duration: 2.3s;
+}
+.cicekler:nth-child(4) .cicek-wrapper{
+    bottom: calc(10% + 260px);
+}
+
+.cicekler:nth-child(5) .gövde{
+    animation-name: sapAnimasyon5;
+    animation-duration: 2.1s;
+}
+.cicekler:nth-child(5) .cicek-wrapper{
+    bottom: calc(10% + 190px);
+}
